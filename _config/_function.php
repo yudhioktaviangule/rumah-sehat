@@ -2,12 +2,11 @@
 
 require __DIR__."/../path.php";
 require "$pathApp/_assets/libs/vendor/autoload.php";
-
 use Carbon\Carbon;
-//$url = base_url('_config/env.txt');
-$json_sqlx = file_get_contents(__DIR__.'/env.json',TRUE);
 
+$json_sqlx = file_get_contents(__DIR__.'/env.json',TRUE);
 $config = json_decode($json_sqlx,TRUE);
+define('KONFIG',$config);
 
 function tgl_indo($tgl) {
     $tanggal = Carbon::parse($tgl)->format('d-m-Y');
@@ -15,16 +14,13 @@ function tgl_indo($tgl) {
 }
 
 function base_url($url = null) {
-    $base_url  = "http://localhost:8000";
+    $base_url  = KONFIG['app_url'];
     if($url != null) {
         return $base_url."/".$url;
     } else {
         return $base_url;
     }
 }
-
-
-
 function dd($var){
     echo "<pre>"; 
     var_dump($var);       

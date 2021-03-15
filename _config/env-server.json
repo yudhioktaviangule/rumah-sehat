@@ -1,6 +1,7 @@
 {
-    "user":"extraorg_rs",
-    "pass":"@Aspire01",
-    "db":"extraorg_rs",
-    "host":"localhost"
+    "db":"db_rs",
+    "pass":"123",
+    "user":"yudhi",
+    "host":"localhost",
+    "app_url":"http://localhost:8000"
 }
