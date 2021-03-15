@@ -1,11 +1,9 @@
 <?php
 require '_function.php';
-$sql_details = array(
-    'user' => 'yudhi',
-    'pass' => '123',
-    'db'   => 'db_rs',
-    'host' => 'localhost'
-);
+
+$sql_details = $config;
+
+
 $con = new mysqli($sql_details['host'],$sql_details['user'],$sql_details['pass'],$sql_details['db']);
 if ($con->connect_errno) {
     echo "Failed to connect to MySQL: " . $con->connect_error;

@@ -1,9 +1,4 @@
 <?php
-$sql_details = array(
-    'user' => 'yudhi',
-    'pass' => '123',
-    'db'   => 'db_rs',
-    'host' => 'localhost'
-);
+$sql_details = $config;
 $con = $sql_details;
 ?>
