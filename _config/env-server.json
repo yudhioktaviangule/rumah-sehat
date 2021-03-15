@@ -1,7 +1,7 @@
 {
-    "db":"db_rs",
-    "pass":"123",
-    "user":"yudhi",
+    "db":"exp_db",
+    "pass":"password",
+    "user":"user",
     "host":"localhost",
     "app_url":"http://localhost:8000"
 }
