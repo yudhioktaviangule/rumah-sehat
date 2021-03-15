@@ -1,8 +1,8 @@
 <?php 
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
-require __DIR__."/../path.php";
-require "$pathApp/_assets/libs/vendor/autoload.php";
+
+require __DIR__."/../_assets/libs/vendor/autoload.php";
 use Carbon\Carbon;
 
 $json_sqlx = file_get_contents(__DIR__.'/env.json',TRUE);
