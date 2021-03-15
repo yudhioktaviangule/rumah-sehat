@@ -4,7 +4,7 @@ CREATE TABLE `tb_diagnosa` (
   `id_diagnosa` varchar(50) NOT NULL,
   `icd` varchar(50) NOT NULL,
   `diagnosa` text NOT NULL
-) ENGINE=InnoDB DEFAULT ;
+);
 
 
 INSERT INTO `tb_diagnosa` (`id_diagnosa`, `icd`, `diagnosa`) VALUES
@@ -28,7 +28,7 @@ CREATE TABLE `tb_dokter` (
   `jenis_kelamin` enum('laki-laki','perempuan') NOT NULL,
   `alamat` text NOT NULL,
   `spesialis` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT ;
+);
 
 --
 -- Dumping data for table `tb_dokter`
@@ -52,7 +52,7 @@ CREATE TABLE `tb_kunjungan` (
   `id_poli` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `tanggal` date NOT NULL,
   `id_user` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT ;
+);
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ CREATE TABLE `tb_pasien` (
   `no_kepesertaan` varchar(50) NOT NULL,
   `no_sep` varchar(50) NOT NULL,
   `jenis_pasien` enum('bpjs','non bpjs') NOT NULL
-) ENGINE=InnoDB DEFAULT ;
+);
 
 --
 -- Dumping data for table `tb_pasien`
@@ -94,7 +94,7 @@ CREATE TABLE `tb_periksa` (
   `id_poli` varchar(50) NOT NULL,
   `tindakan` longtext NOT NULL,
   `tanggal` date NOT NULL
-) ENGINE=InnoDB DEFAULT ;
+);
 
 -- --------------------------------------------------------
 
@@ -105,7 +105,7 @@ CREATE TABLE `tb_periksa` (
 CREATE TABLE `tb_poliklinik` (
   `id_poli` varchar(50) NOT NULL,
   `nama_poli` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT ;
+);
 
 --
 -- Dumping data for table `tb_poliklinik`
@@ -129,7 +129,7 @@ CREATE TABLE `tb_user` (
   `username` varchar(40) NOT NULL,
   `password` varchar(50) NOT NULL,
   `level` enum('admin','pelaporan','fo','dokter') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'admin'
-) ENGINE=InnoDB DEFAULT ;
+);
 
 --
 -- Dumping data for table `tb_user`
